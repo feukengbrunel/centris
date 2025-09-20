@@ -1,3 +1,4 @@
+import 'package:centris/features/onboarding/presentation/screens/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,27 +13,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
      debugShowCheckedModeBanner: false,
-      home: const MyHomePage(),
+      home: const OnboardingScreen(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  
-  const MyHomePage({super.key});
 
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  
-
-  @override
-  Widget build(BuildContext context) {
- 
-    return Scaffold(
-     
-    );
-  }
-}
