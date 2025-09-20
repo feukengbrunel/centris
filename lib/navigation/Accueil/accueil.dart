@@ -1,8 +1,11 @@
+import 'package:centris/navigation/Accueil/widgets/header.dart';
+import 'package:centris/navigation/Accueil/widgets/property_card.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'dart:typed_data';
 import 'dart:ui' as ui;
 import 'package:flutter/foundation.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 
 class WelcomeScreen extends StatefulWidget {

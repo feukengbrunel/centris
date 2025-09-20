@@ -1,6 +1,5 @@
-import 'package:centris/features/auth/data/models/register_data.dart';
 import 'package:flutter/material.dart';
-
+import '../models/register_data.dart';
 
 class RegisterController {
   final RegisterData _registerData = const RegisterData(
@@ -73,10 +72,34 @@ class RegisterController {
   }
 
   void navigateToTerms(BuildContext context) {
-    
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('Conditions d\'utilisation'),
+        content: const Text('Conditions d\'utilisation à implémenter'),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text('Fermer'),
+          ),
+        ],
+      ),
+    );
   }
 
   void navigateToPrivacyPolicy(BuildContext context) {
-    
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('Politique de confidentialité'),
+        content: const Text('Politique de confidentialité à implémenter'),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text('Fermer'),
+          ),
+        ],
+      ),
+    );
   }
 }

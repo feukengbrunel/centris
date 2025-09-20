@@ -1,4 +1,6 @@
 import 'package:centris/features/auth/data/models/login_model.dart';
+import 'package:centris/features/auth/presentation/signUp/screens/register_screen.dart';
+import 'package:centris/navigation/Accueil/accueil.dart';
 import 'package:flutter/material.dart';
 
 
@@ -46,22 +48,24 @@ class LoginController {
     // Simulation de connexion réussie
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(content: Text('Connexion réussie')),
+      
     );
     
     // Navigation vers l'écran d'accueil
-    // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomeScreen()));
+     Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => WelcomeScreen()));
   }
 
   void navigateToRegister(BuildContext context) {
-    //Navigator.push(
-    //  context,
-      //MaterialPageRoute(builder: (context) => const RegisterScreen()),
-   // );
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => const RegisterScreen()),
+    );
   }
 
   void navigateToForgotPassword(BuildContext context) {
     // Implémentez la navigation vers l'écran de mot de passe oublié
     showDialog(
+      barrierColor: Colors.white,
       context: context,
       builder: (context) => AlertDialog(
         title: const Text('Mot de passe oublié'),

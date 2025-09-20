@@ -61,7 +61,8 @@ class _ProfessionalHeaderState extends State<ProfessionalHeader>
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(25),
                   ),
-                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+                  margin: const EdgeInsets.symmetric(vertical: 8.0),
                   child: const Row(
                     children: [
                       Icon(Icons.search, color: Color(0xFF0B1340), size: 30),

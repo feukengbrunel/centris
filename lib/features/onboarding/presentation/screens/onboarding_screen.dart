@@ -1,8 +1,11 @@
+import 'package:centris/features/auth/presentation/login/screens/login_screen.dart';
+import 'package:centris/features/auth/presentation/signUp/screens/register_screen.dart';
 import 'package:centris/features/onboarding/data/models/onboarding_page.dart';
 import 'package:centris/features/onboarding/onboarding_controller.dart';
 import 'package:centris/features/onboarding/presentation/widgets/onboarding_content.dart';
 import 'package:centris/features/onboarding/presentation/widgets/onboarding_indicator.dart';
 import 'package:centris/features/onboarding/presentation/widgets/onboarding_navigation.dart';
+import 'package:centris/navigation/Accueil/accueil.dart';
 import 'package:flutter/material.dart';
 
 class OnboardingScreen extends StatefulWidget {
@@ -42,9 +45,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   ];
 
   void _navigateToHome() {
-    //Navigator.of(context).pushReplacement(
-    //  MaterialPageRoute(builder: (context) => const WelcomeScreen())
-    //);
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute(builder: (context) => const WelcomeScreen())
+    );
+  }
+  void _navigateToRegister() {
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute(builder: (context) => const LoginScreen())
+    );
   }
 
   @override
@@ -136,8 +144,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     totalPages: _pages.length,
                     onPrevious: _controller.previousPage,
                     onNext: _controller.nextPage,
-                    onSkip: _navigateToHome,
-                    onStart: _navigateToHome,
+                    onSkip: _navigateToRegister,
+                    onStart: _navigateToRegister,
                   ),
                 ],
               );
